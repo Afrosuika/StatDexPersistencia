@@ -46,8 +46,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
 
 		// dades= new ArrayList<Pokemon>();
 
-		helper = new PokemonSQLiteHelper(this,
-				BD_NOM, null, BD_VERSIO);
+		helper = new PokemonSQLiteHelper(this, BD_NOM, null, BD_VERSIO);
 		SQLiteDatabase db = helper.getWritableDatabase();
 		db.close();
 		conversor = new PokemonConversor(helper);
@@ -184,17 +183,17 @@ public class MainActivity extends Activity implements OnItemClickListener {
 			});
 			adapter.notifyDataSetChanged();
 			break;
-			
+
 		case R.id.AddPokemon:
-			Intent i = new Intent(MainActivity.this, CrearPokemonActivity.class);		
-//			Bundle b = new Bundle();
-//			b.putSerializable("llista", dades);
-//			i.putExtras(b);
+			Intent i = new Intent(MainActivity.this, CrearPokemonActivity.class);
+			// Bundle b = new Bundle();
+			// b.putSerializable("llista", dades);
+			// i.putExtras(b);
 			startActivity(i);
 			break;
-			
-		case R.id.RemovePokemon:			
-			AlertDialog.Builder alert = new AlertDialog.Builder(this);			
+
+		case R.id.RemovePokemon:
+			AlertDialog.Builder alert = new AlertDialog.Builder(this);
 			alert.setMessage("Introdueix el numero");
 
 			final EditText input = new EditText(this);
@@ -202,6 +201,8 @@ public class MainActivity extends Activity implements OnItemClickListener {
 
 			alert.setPositiveButton("Elimina!",
 					new DialogInterface.OnClickListener() {
+						boolean espotmirar;
+
 						public void onClick(DialogInterface dialog,
 								int whichButton) {
 							Editable value = input.getText();
@@ -209,13 +210,18 @@ public class MainActivity extends Activity implements OnItemClickListener {
 							try {
 								nombreintroduit = Integer.parseInt(value
 										.toString());
+								espotmirar = true;
 
 							} catch (Exception e) {
 								Toast.makeText(getApplicationContext(),
 										"Has d'introduir un numero",
 										Toast.LENGTH_SHORT).show();
+								espotmirar = false;
+
 							}
-							esborrarSiExisteix(nombreintroduit);
+							if (espotmirar) {
+								esborrarSiExisteix(nombreintroduit);
+							}
 						}
 					});
 
@@ -235,23 +241,24 @@ public class MainActivity extends Activity implements OnItemClickListener {
 	}
 
 	public void esborrarSiExisteix(int numero) {
-		boolean trobat = false;		
+		boolean trobat = false;
 		Pokemon pokemon = null;
-		 for(Pokemon elpokemon:dades){
-		 if(elpokemon.getNum()==numero){
-		 conversor.remove(elpokemon);
-		 pokemon=elpokemon;
-		 trobat=true;
-		 }
-		 }
-		
+		for (Pokemon elpokemon : dades) {
+			if (elpokemon.getNum() == numero) {
+				conversor.remove(elpokemon);
+				pokemon = elpokemon;
+				trobat = true;
+			}
+		}
+
 		if (!trobat) {
 			Toast.makeText(this, R.string.pokemonNoExist, Toast.LENGTH_SHORT)
 					.show();
 		} else {
 			dades.remove(pokemon);
 			adapter.notifyDataSetChanged();
-			Toast.makeText(this, "És súper eficaç!!", Toast.LENGTH_SHORT).show();
+			Toast.makeText(this, "És súper eficaç!!", Toast.LENGTH_SHORT)
+					.show();
 		}
 	}
 
