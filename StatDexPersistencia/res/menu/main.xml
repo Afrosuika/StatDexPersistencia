@@ -1,0 +1,46 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ActionBar="http:://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/orderby"
+        ActionBar:showAsAction="ifRoom|withText"
+        android:orderInCategory="100"
+        android:title="@string/orderby">
+        <menu>
+            <item
+                android:id="@+id/orderby_number"
+                android:title="@string/orderby_number"/>
+            <item
+                android:id="@+id/orderby_name"
+                android:title="@string/orderby_name"/>
+            <item
+                android:id="@+id/orderby_hp"
+                android:title="@string/orderby_hp"/>
+            <item
+                android:id="@+id/orderby_atk"
+                android:title="@string/orderby_atk"/>
+            <item
+                android:id="@+id/orderby_def"
+                android:title="@string/orderby_def"/>
+            <item
+                android:id="@+id/orderby_spatk"
+                android:title="@string/orderby_spatk"/>
+            <item
+                android:id="@+id/orderby_spdef"
+                android:title="@string/orderby_spdef"/>
+            <item
+                android:id="@+id/orderby_spe"
+                android:title="@string/orderby_spe"/>
+            <item
+                android:id="@+id/orderby_total"
+                android:title="@string/orderby_total"/>            
+        </menu>
+    </item>
+    <item android:id="@+id/AddOrRemove" android:title="Afegir/Eliminar">
+        <menu>
+            <item android:id="@+id/AddPokemon" android:title="Afegir Pokemon"/>
+            <item android:id="@+id/RemovePokemon" android:title="Eliminar Pokemon"/>
+        </menu>
+    </item>
+
+</menu>

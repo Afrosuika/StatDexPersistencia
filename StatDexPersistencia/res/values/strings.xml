@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">StatDex</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_mostrastats">MostrastatsActivity</string>
+    <string name="displaytext_hp">"    HP"</string>
+    <string name="displaytext_atk">"  Atk."</string>
+    <string name="displaytext_def">"  Def."</string>
+    <string name="displaytext_spatk">SpAtk.</string>
+    <string name="displaytext_spdef">SpDef.</string>
+    <string name="displaytext_speed">"  Spe."</string>
+    <string name="displaytext_total">" Total"</string>
+    <string name="orderby">Ordenar</string>
+    <string name="orderby_name">per nom</string>
+    <string name="orderby_number">per numero</string>
+    <string name="orderby_hp">per hp</string>
+    <string name="orderby_atk">per atac</string>
+    <string name="orderby_def">per defensa</string>
+    <string name="orderby_spatk">per atac especial</string>
+    <string name="orderby_spdef">per defensa especial</string>
+    <string name="orderby_spe">per velocitat</string>
+    <string name="orderby_total">per total</string>
+    <string name="displaynumbers">mostrar numeros</string>
+    <string name="displaybars">mostrar barres</string>
+    <string name="show_bars">Barres</string>
+    <string name="show_select">Mostrar</string>
+    <string name="show_numbers">Numeros</string>
+    <string name="pokemonNoExist">Aquest pokemon no existeix a la base de dades</string>
+    <string name="title_activity_crear_pokemon">CrearPokemonActivity</string>
+    
+    
+    <string-array name="tipos1">
+        <item>Bicho</item>
+        <item>Siniestro</item>
+        <item>Dragón</item>
+        <item>Eléctrico</item>
+        <item>Hada</item>
+        <item>Lucha</item>
+        <item>Fuego</item>
+        <item>Volador</item>
+        <item>Fantasma</item>
+        <item>Planta</item>
+        <item>Tierra</item>
+        <item>Hielo</item>
+        <item>Normal</item>
+        <item>Veneno</item>
+        <item>Psíquico</item>
+        <item>Roca</item>
+        <item>Acero</item>
+        <item>Agua</item>
+    </string-array>
+    
+    <string-array name="tipos2">
+        <item>Bicho</item>
+        <item>Siniestro</item>
+        <item>Dragón</item>
+        <item>Eléctrico</item>
+        <item>Hada</item>
+        <item>Lucha</item>
+        <item>Fuego</item>
+        <item>Volador</item>
+        <item>Fantasma</item>
+        <item>Planta</item>
+        <item>Tierra</item>
+        <item>Hielo</item>
+        <item>Normal</item>
+        <item>Veneno</item>
+        <item>Psíquico</item>
+        <item>Roca</item>
+        <item>Acero</item>
+        <item>Agua</item>
+        <item>Ninguno</item>
+    </string-array>
+
+</resources>
